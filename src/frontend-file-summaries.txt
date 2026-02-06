@@ -1,0 +1,6 @@
+{
+  "frontend/src/index.css": "Global styles with Valentine's Day themed OKLCH color system (warm reds, pinks, creams) for both light and dark modes, Google Fonts imports for Playfair Display and Poppins, and custom kiss-fall keyframe animation for the kiss shower effect.",
+  "frontend/tailwind.config.js": "Tailwind configuration extended with Valentine's Day theme including custom fonts (Playfair Display, Poppins), romantic shadow utilities, and custom animations (float, pulse-heart, fade-in).",
+  "frontend/src/App.tsx": "Single-page Valentine's Day app that displays \"Will you be my valentine?\" with Yes/No buttons; the No button evades clicks by moving to random positions on hover, and clicking Yes shows a celebratory success state with the custom message \"I love you Motu, Tu mera pyaara baccha h\" along with hearts, animations, and a kiss shower effect.",
+  "frontend/src/components/KissShower.tsx": "Reusable overlay component that generates and animates 40 kiss emoji particles (💋) falling from the top of the screen with random positions, delays, durations, and rotations; uses fixed positioning with pointer-events disabled to avoid blocking interactions or causing layout shifts."
+}

@@ -1,0 +1,54 @@
+{
+  "kind": "build_request",
+  "title": "Update Yes-click success message and add kiss shower animation",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "When the user clicks the \"Yes\" button, update the success state content to display the exact message: \"I love you Motu, Tu mera pyaara baccha h\" as the primary (most prominent) success message.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "When she clicks 'Yes' , show the message \"I love you Motu, Tu mera pyaara baccha h\""
+        ]
+      },
+      "acceptanceCriteria": [
+        "Clicking the \"Yes\" button transitions to the success state.",
+        "The success state prominently displays the exact text: \"I love you Motu, Tu mera pyaara baccha h\" (matching capitalization and punctuation)."
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Add a celebratory \"lots of kisses\" animation that plays when the user clicks \"Yes\" (e.g., a kiss-mark/lip-print particle shower that spawns many kiss elements and animates them across the screen without blocking interaction).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "And give animation for lots of kisses."
+        ]
+      },
+      "acceptanceCriteria": [
+        "After clicking \"Yes\", a visible animation of many kiss elements appears on the screen (not just a single icon).",
+        "The kiss animation is animated (movement + fade/scale) and feels celebratory/dense (i.e., clearly \"lots\" of kisses).",
+        "The animation does not cause page scrollbars or layout shifts (page remains stable and usable)."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not edit files under frontend/immutablePaths (including Internet Identity and actor hooks, and shadcn/ui source components).",
+    "Keep the backend as a single Motoko actor; no backend changes are required for this request."
+  ],
+  "nonGoals": [
+    "Do not add new authentication flows or backend APIs.",
+    "Do not change the existing \"No\" button evasive behavior."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

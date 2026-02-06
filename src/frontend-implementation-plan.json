@@ -1,0 +1,48 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Update Yes success message and add kiss shower animation",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Update the Yes-click success state to prominently display the exact requested primary message.",
+      "acceptanceCriteria": [
+        "Clicking the \"Yes\" button transitions to the success state.",
+        "The success state prominently displays the exact text: \"I love you Motu, Tu mera pyaara baccha h\" (matching capitalization and punctuation)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Replace the current success-state primary headline/content so the most prominent success message is exactly: \"I love you Motu, Tu mera pyaara baccha h\". Ensure it is the primary (largest/most prominent) success text shown after clicking \"Yes\"."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Add a non-blocking celebratory kiss-mark particle shower animation that plays after clicking Yes.",
+      "acceptanceCriteria": [
+        "After clicking \"Yes\", a visible animation of many kiss elements appears on the screen (not just a single icon).",
+        "The kiss animation is animated (movement + fade/scale) and feels celebratory/dense (i.e., clearly \"lots\" of kisses).",
+        "The animation does not cause page scrollbars or layout shifts (page remains stable and usable)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/KissShower.tsx",
+          "operation": "create",
+          "description": "Create a reusable KissShower overlay component that spawns many kiss elements (e.g., lip-print/💋 particles) and animates them (movement + fade/scale). Render into a fixed, inset overlay with overflow hidden and pointer-events disabled so it does not block interaction or cause scrollbars."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire KissShower to play when the user clicks \"Yes\" (i.e., trigger on success transition). Ensure the overlay is mounted in the accepted/success view and configured to feel dense (lots of particles) while keeping the page stable and usable."
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Add global CSS (or Tailwind-compatible utility support) for kiss particle animations (e.g., keyframes for floating/drifting + fade/scale) and any helper classes needed by KissShower to ensure smooth animation without layout shifts or scrollbars."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --radius: 1rem;
+        /* Valentine's Day theme - warm reds, pinks, and creams */
+        --background: 0.98 0.015 15;
+        --foreground: 0.25 0.08 15;
+        --card: 1 0.01 15;
+        --card-foreground: 0.25 0.08 15;
+        --popover: 1 0.01 15;
+        --popover-foreground: 0.25 0.08 15;
+        --primary: 0.55 0.22 15;
+        --primary-foreground: 0.99 0.01 15;
+        --secondary: 0.95 0.04 15;
+        --secondary-foreground: 0.35 0.08 15;
+        --muted: 0.96 0.02 15;
+        --muted-foreground: 0.50 0.05 15;
+        --accent: 0.92 0.08 340;
+        --accent-foreground: 0.30 0.08 15;
+        --destructive: 0.577 0.245 27.325;
+        --destructive-foreground: 0.985 0 0;
+        --border: 0.90 0.04 15;
+        --input: 0.90 0.04 15;
+        --ring: 0.55 0.22 15;
+        --chart-1: 0.646 0.222 15;
+        --chart-2: 0.6 0.118 340;
+        --chart-3: 0.75 0.15 25;
+        --chart-4: 0.828 0.189 350;
+        --chart-5: 0.769 0.188 10;
+    }
+
+    .dark {
+        --background: 0.15 0.05 15;
+        --foreground: 0.98 0.015 15;
+        --card: 0.20 0.06 15;
+        --card-foreground: 0.98 0.015 15;
+        --popover: 0.18 0.06 15;
+        --popover-foreground: 0.98 0.015 15;
+        --primary: 0.65 0.20 15;
+        --primary-foreground: 0.15 0.05 15;
+        --secondary: 0.25 0.06 15;
+        --secondary-foreground: 0.98 0.015 15;
+        --muted: 0.25 0.06 15;
+        --muted-foreground: 0.65 0.05 15;
+        --accent: 0.35 0.12 340;
+        --accent-foreground: 0.98 0.015 15;
+        --destructive: 0.704 0.191 22.216;
+        --destructive-foreground: 0.98 0.015 15;
+        --border: 0.30 0.06 15;
+        --input: 0.30 0.06 15;
+        --ring: 0.65 0.20 15;
+        --chart-1: 0.646 0.222 15;
+        --chart-2: 0.6 0.118 340;
+        --chart-3: 0.75 0.15 25;
+        --chart-4: 0.828 0.189 350;
+        --chart-5: 0.769 0.188 10;
+    }
+
+    * {
+        @apply border-border;
+    }
+    body {
+        @apply bg-background text-foreground;
+    }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+@keyframes kiss-fall {
+    0% {
+        transform: translateY(0) rotate(var(--rotation, 0deg)) scale(1);
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.8;
+        transform: translateY(50vh) rotate(calc(var(--rotation, 0deg) + 180deg)) scale(1.2);
+    }
+    100% {
+        transform: translateY(110vh) rotate(calc(var(--rotation, 0deg) + 360deg)) scale(0.8);
+        opacity: 0;
+    }
+}
+
+.animate-kiss-fall {
+    animation: kiss-fall 3s ease-in forwards;
+}

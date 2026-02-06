@@ -1,0 +1,43 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-when-the-user-clicks-the-yes-button-update-the-success-state-content-to-display-the-exact-message-i-love-you-motu-tu-mera-pyaara-baccha-h-as-the-primary-most-prominent-success-message",
+      "featureTitle": "When the user clicks the \"Yes\" button, update the success state content to display the exact message: \"I love you Motu, Tu mera pyaara baccha h\" as the primary (most prominent) success message.",
+      "files": [
+        "frontend/src/App.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-a-celebratory-lots-of-kisses-animation-that-plays-when-the-user-clicks-yes-e-g-a-kiss-mark-lip-print-particle-shower-that-spawns-many-kiss-elements-and-animates-them-across-the-screen-without-blocking-interaction",
+      "featureTitle": "Add a celebratory \"lots of kisses\" animation that plays when the user clicks \"Yes\" (e.g., a kiss-mark/lip-print particle shower that spawns many kiss elements and animates them across the screen without blocking interaction).",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/KissShower.tsx",
+        "frontend/src/index.css"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

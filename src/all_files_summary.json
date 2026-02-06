@@ -1,0 +1,15 @@
+{
+  "backend/main.mo": "Defines an empty Motoko actor, serving as a placeholder backend canister with no methods implemented.",
+  "feature_evidence.json": "Machine-readable report describing two implemented UI features (Yes button success message and kiss animation), listing affected files, components, test IDs, and confidence levels.",
+  "frontend-file-summaries.txt": "Prewritten summaries of key frontend files, outlining app behavior, theming, Tailwind configuration, and the kiss shower animation component.",
+  "frontend/index.css": "Global Tailwind CSS variables defining a neutral light/dark theme with extensive OKLCH color tokens for layout, charts, and sidebar styling.",
+  "frontend/index.html": "HTML entry point that sets the page title, viewport metadata, and mounts the React app to the root div.",
+  "frontend/src/App.tsx": "Main React component implementing the Valentine’s Day UI with evasive No button logic and a Yes-triggered success state showing a love message, animations, and the kiss shower.",
+  "frontend/src/components/KissShower.tsx": "React component that spawns and animates multiple falling kiss emoji particles using CSS animations without blocking user interaction.",
+  "frontend/src/hooks/useActor.ts": "Custom React hook that creates and caches a backend actor using React Query, recreating it when the user’s Internet Identity changes.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Provides context, hooks, and a provider for managing Internet Identity authentication, login state, and identity persistence via AuthClient.",
+  "frontend/src/index.css": "Frontend global styles defining a Valentine’s Day color theme, Google Fonts, and the kiss-fall keyframe animation used by the kiss shower effect.",
+  "frontend/src/main.tsx": "Frontend entry point that initializes React with React Query and Internet Identity providers and renders the App component.",
+  "frontend/tailwind.config.js": "Tailwind CSS configuration enabling class-based dark mode, scanning frontend source files, and extending the theme with custom fonts, OKLCH-based color tokens, container settings, shadows, border radii, and UI animations. Includes plugins for typography, container queries, and animations.",
+  "project_state.json": "Project metadata describing an ICP starter app with a Motoko backend canister and a React (Vite) + Tailwind/shadcn UI frontend, including auth, actor integration, and build/deploy templates. Tracks existing features and pending Valentine-themed UI feature requests with versioning."
+}
